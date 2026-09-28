@@ -1,4 +1,6 @@
-CREATE TABLE IF NOT EXISTS employee(
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee(
      id BIGSERIAL PRIMARY KEY,
      name VARCHAR(100),
      department VARCHAR(50),
