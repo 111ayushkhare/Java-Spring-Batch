@@ -4,7 +4,6 @@
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.x-brightgreen.svg)](https://spring.io/projects/spring-boot)
 [![Spring Batch](https://img.shields.io/badge/Spring%20Batch-5.x-green.svg)](https://spring.io/projects/spring-batch)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue.svg)](https://www.postgresql.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A production-grade, chunk-oriented ETL pipeline built using **Spring Batch** and **Spring Boot**. The service reads employee records from a relational database, applies business filtering and salary adjustment transformations, logs lifecycle metrics via **Spring AOP (AspectJ)**, and persists processed records to an audit-ready target table in PostgreSQL.
 
