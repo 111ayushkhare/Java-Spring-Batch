@@ -16,7 +16,7 @@ This repository serves as the central parent workspace for Spring Batch projects
 | Project | Description | Core Patterns & Components | Status | Release |
 | :--- | :--- | :--- | :---: | :---: |
 | **[batch-one](batch-one/README.md)** | **Employee Salary Batch Pipeline** | • `JdbcCursorItemReader` streaming<br/>• Business transformation & threshold filter<br/>• `JdbcBatchItemWriter` batch inserts<br/>• AspectJ AOP execution monitoring (`LoggingAspect`)<br/>• PostgreSQL persistence & auto-DDL | `Ready` | [`v0.1.0`](https://github.com/111ayushkhare/Java-Spring-Batch---1/releases/tag/v0.1.0) |
-| **[batch2csv](batch2csv/README.md)** | **Dynamic CSV to Database Pipeline** | • `FlatFileItemReader` for dynamic CSV parsing<br/>• REST API triggering (`@RestController`)<br/>• Comprehensive lifecycle tracking (`JobListener`, `StepListener`, `ChunkListener`)<br/>• `JdbcBatchItemWriter` bulk inserts<br/>• Global exception handling | `Ready` | `WIP` |
+| **[batch2csv](batch2csv/README.md)** | **Dynamic CSV to Database Pipeline** | • `FlatFileItemReader` for dynamic CSV parsing<br/>• REST API triggering (`@RestController`)<br/>• Comprehensive lifecycle tracking (`JobListener`, `StepListener`, `ChunkListener`)<br/>• `JdbcBatchItemWriter` bulk inserts<br/>• Global exception handling | `Ready` | [`v0.2.0`](https://github.com/111ayushkhare/Java-Spring-Batch---1/releases/tag/v0.2.0) |
 
 > Newer batch projects demonstrating patterns such as flat-file ingestion, skip/retry fault tolerance, partitioned processing, and event-driven architectures will be added as sibling modules in this hub.
 
