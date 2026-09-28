@@ -3,7 +3,6 @@ package learn.spring.springbatch.batch2csv.aop;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
-import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
@@ -29,12 +28,5 @@ public class ControllerLoggingAspect {
     public void afterReturning(JoinPoint joinPoint, Object result) {
         log.info("Response : {}", result);
         log.info("=========== CONTROLLER END ===========");
-    }
-
-    @AfterThrowing(
-            pointcut = "within(@org.springframework.web.bind.annotation.RestController *)",
-            throwing = "ex")
-    public void exception(Exception exception) {
-        log.error("Controller Exception : {}", exception.getMessage());
     }
 }

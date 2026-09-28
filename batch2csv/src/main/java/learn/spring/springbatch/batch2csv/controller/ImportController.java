@@ -21,18 +21,13 @@ public class ImportController {
     }
 
     @PostMapping(value = "/import", consumes = "multipart/form-data")
-    public ResponseEntity<ApiResponse<String>> importCsv(@RequestParam("file") MultipartFile file) {
-        try {
-            BatchStatus status = batchService.runBatch(file);
-            if (status == BatchStatus.COMPLETED) {
-                return ResponseEntity.ok(ApiResponse.success("Batch job completed successfully", status.toString()));
-            } else {
-                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                        .body(ApiResponse.error("Batch job failed or was stopped", status.toString()));
-            }
-        } catch (Exception e) {
+    public ResponseEntity<ApiResponse<String>> importCsv(@RequestParam("file") MultipartFile file) throws Exception {
+        BatchStatus status = batchService.runBatch(file);
+        if (status == BatchStatus.COMPLETED) {
+            return ResponseEntity.ok(ApiResponse.success("Batch job completed successfully", status.toString()));
+        } else {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(ApiResponse.error("An error occurred during batch processing", e.getMessage()));
+                    .body(ApiResponse.error("Batch job failed or was stopped", status.toString()));
         }
     }
 }
