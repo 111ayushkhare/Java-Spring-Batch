@@ -1,0 +1,4 @@
+logging:
+  level:
+    root: info
+    learn.spring.springbatch: info
